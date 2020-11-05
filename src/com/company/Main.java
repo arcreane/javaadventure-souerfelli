@@ -1,8 +1,47 @@
 package com.company;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Main {
 
+    public static Scanner scanner = new Scanner(System.in);
+    public static boolean quit = false;
+
     public static void main(String[] args) {
-	// write your code here
+
+        do {
+            menu();
+            userEntry();
+        } while (!quit);
+
+
+    }
+
+
+    // Printing the options on the menu
+    private static void menu() {
+        System.out.println("\n \n Welcome to the Dungeon Adventure \uD83E\uDDD9\uD83C\uDFFB\u200D♂️\uD83E\uDDDD\uD83C\uDFFB\u200D♀️ \n");
+        System.out.println("If you want to start a new adventure, type 1 and let the magic happen");
+        System.out.println("If you're too coward coward to even try, just quit and type 2");
+    }
+
+    private static void userEntry() {
+        try {
+            int userChoice = scanner.nextInt();
+            // Swich case for user choice
+            switch (userChoice) {
+                case 1:
+                    Game.game();
+                    break;
+                case 2:
+                    quit = true;
+                    break;
+            }
+        } catch (InputMismatchException e) {
+            e.printStackTrace();
+            System.out.println("Be careful, you need to type a number or you'll suffer the wrath of the Monsters");
+            scanner.nextLine();
+        }
     }
 }
