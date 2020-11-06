@@ -4,15 +4,22 @@ import java.util.Random;
 
 public class Room {
     Monster monsterType;
-    String monstersName;
 
 
     Room() {
 
-       monsterType = new Monster();
+        monsterType = new Monster();
 
-
-
+        if (Math.random() < 0.5) {
+            monsterType = new Barbarian();
+        } else {
+            monsterType = new Sorcerer();
+        }
+        //Need to add the monster type
+        System.out.println("Behind the door there is "+ "monsterType");
+        }
+    public Monster getMonsterType() {
+        return monsterType;
 
     }
 
@@ -21,7 +28,7 @@ public class Room {
 
     }
 
-    public void monsterAppear()  {
+    public void monsterAppear() {
 
 
     }

@@ -4,10 +4,7 @@ public class Monster {
 
     Weapon myWeapon;
 
-
     Monster() {
-        myWeapon = new Weapon();
-
 
     }
 
@@ -15,7 +12,7 @@ public class Monster {
 
 
     public void hits(Adventurer adventurer) {
-        adventurer.recievedDamage(myWeapon.damagePoints);
+
 
     }
 }

@@ -3,9 +3,16 @@ package com.company;
 public class Adventurer {
 
     int lifePoints;
+    Weapon[] weaponsAdventurer;
+
 
     Adventurer() {
+        super();
         lifePoints = 200;
+
+        weaponsAdventurer = new Weapon[2];
+        weaponsAdventurer[0] = new Sword();
+        weaponsAdventurer[1] = new WaterFlask();
     }
 
 
