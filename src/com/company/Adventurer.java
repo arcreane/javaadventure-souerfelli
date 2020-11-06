@@ -25,7 +25,13 @@ public class Adventurer {
     }
 
     public void recievedDamage(int damagePoints) {
+
         lifePoints -= damagePoints;
+        if (lifePoints<0){
+            System.out.println("R.I.P, you're going to a better place !");
+
+        }
+
     }
 }
 

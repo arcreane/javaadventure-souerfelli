@@ -11,7 +11,7 @@ public class Barbarian extends Monster {
     }
 
     public void hits(Adventurer adventurer) {
-        System.out.println("The barbarbian hits you with an axe");
+
 
     }
 }

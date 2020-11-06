@@ -9,7 +9,6 @@ public class Sorcerer extends Monster {
     }
 
     public void hits(Adventurer adventurer) {
-        System.out.println("The sorcerer hits you with a lightning of strike");
 
     }
 

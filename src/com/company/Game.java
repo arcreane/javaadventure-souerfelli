@@ -20,12 +20,6 @@ public class Game {
         Adventurer myAdventurer = new Adventurer();
         Dungeon dungeon = new Dungeon();
         myAdventurer.enter(dungeon);
-        /*Room room = new Room()[5];
-
-        for (int i = 0; i <5; i++) {
-            room.openTheDoor();
-
-        }*/
 
     }
 }

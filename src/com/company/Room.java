@@ -6,17 +6,18 @@ public class Room {
     Monster monsterType;
 
 
+
     Room() {
 
         monsterType = new Monster();
-
         if (Math.random() < 0.5) {
             monsterType = new Barbarian();
+            System.out.println("The barbarbian hits you with an axe");
         } else {
             monsterType = new Sorcerer();
+            System.out.println("The sorcerer hits you with a lightning of strike");
         }
         //Need to add the monster type
-        System.out.println("Behind the door there is "+ "monsterType");
         }
     public Monster getMonsterType() {
         return monsterType;
