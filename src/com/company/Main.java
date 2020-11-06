@@ -10,8 +10,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        menu();
         do {
-            menu();
             userEntry();
         } while (!quit);
 
@@ -21,9 +21,9 @@ public class Main {
 
     // Printing the options on the menu
     private static void menu() {
-        System.out.println("\n \n Welcome to the Dungeon Adventure \uD83E\uDDD9\uD83C\uDFFB\u200D♂️\uD83E\uDDDD\uD83C\uDFFB\u200D♀️ \n");
+        System.out.println("\n \n Welcome to the Dungeon Adventure \uD83E\uDDD9\uD83C\uDFFB\u200D️\uD83E\uDDDD\uD83C\uDFFB\u200D️ \n");
         System.out.println("If you want to start a new adventure, type 1 and let the magic happen");
-        System.out.println("If you're too coward coward to even try, just quit and type 2");
+        System.out.println("If you're too coward to even try, just type 2 and quit already");
     }
 
     private static void userEntry() {
@@ -32,6 +32,7 @@ public class Main {
             // Swich case for user choice
             switch (userChoice) {
                 case 1:
+                    Game.enterTheDungeon();
                     Game.game();
                     break;
                 case 2:
@@ -41,6 +42,7 @@ public class Main {
         } catch (InputMismatchException e) {
             e.printStackTrace();
             System.out.println("Be careful, you need to type a number or you'll suffer the wrath of the Monsters");
+            menu();
             scanner.nextLine();
         }
     }
